@@ -6,11 +6,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserRepository {
-    public static List<User> userList=new ArrayList<>();
-    public void save(User user){
+    private static List<User> userList=new ArrayList<>();
+    public static void save(User user){
         userList.add(user);
     }
-    public List<User> getUserList(){
+    public static  List<User> getUserList(){
         return userList;
     }
 }
