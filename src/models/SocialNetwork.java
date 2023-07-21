@@ -3,18 +3,21 @@ package models;
 import Repository.FeedRepository;
 import Repository.SessionRepository;
 import Repository.UserRepository;
+import Repository.VotingTracker;
 import generators.PostIdGenerator;
 import lombok.AllArgsConstructor;
 
 import javax.sound.midi.Soundbank;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
 @AllArgsConstructor
 public class SocialNetwork {
     private UserRepository userRepository;
     private SessionRepository sessionRepository;
     private FeedRepository feedRepository;
+    private VotingTracker votingTracker;
     public void signup(User user){
         if(userRepository.getUserList().contains(user)){
             System.out.println("User already exist.");
@@ -45,19 +48,23 @@ public class SocialNetwork {
 
     public void showNewsFeed(){
         System.out.println("NEWS FEED..");
-        List<Post> postList = feedRepository.getPostList();
-        postList.forEach(post -> System.out.println(post.getPostId()+" "+post.getContent()+" "+ post.getUpvotes()+" "
-                + post.getDownvotes()+" \nBy "+post.getUser().getUserName()+ " "+post.postCreatedTime(LocalDateTime.now(), post.getCreatedTime())));
+        Map<Long,Post> postList = feedRepository.getPostList();
+        postList.forEach((id, post) -> System.out.println(post.getPostId()+" "+post.getContent()+" \nUpvotes "+ post.getUpvotes()+" \nDownvotes "
+                + post.getDownvotes()+" \nCreated by "+post.getUser().getUserName()+ " "+post.postCreatedTime(LocalDateTime.now(), post.getCreatedTime())+"\n"));
     }
 
     //one user can only upvote/downvote one time
-    public void upvotePost(Post post, User user){
-
+    public void upvotePost(Long postId, User user){
+        votingTracker.upvote(postId, user, feedRepository);
 
     }
 
-    public void downvotePost(){
+    public void downvotePost(Long postId, User user){
+        votingTracker.downvote(postId, user, feedRepository);
+    }
 
+    public void follow(User user, User target){
+        userRepository.follow(user, target);
     }
 
 

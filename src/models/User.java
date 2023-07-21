@@ -16,6 +16,7 @@ public class User {
     private Long userId;
     private String userName;
     List<User> followers=new ArrayList<>();
+    List<User> following=new ArrayList<>();
 
     //private String password;
 }
