@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @AllArgsConstructor
 @Getter
 @Setter
@@ -12,6 +15,7 @@ import lombok.Setter;
 public class User {
     private Long userId;
     private String userName;
+    List<User> followers=new ArrayList<>();
 
     //private String password;
 }

@@ -7,10 +7,10 @@ import java.util.List;
 
 public class UserRepository {
     private static List<User> userList=new ArrayList<>();
-    public static void save(User user){
+    public  void save(User user){
         userList.add(user);
     }
-    public static  List<User> getUserList(){
+    public   List<User> getUserList(){
         return userList;
     }
 }
