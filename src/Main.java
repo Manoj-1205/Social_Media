@@ -3,13 +3,10 @@ import Repository.SessionRepository;
 import Repository.UserRepository;
 import Repository.VotingTracker;
 import generators.UserIdGenerator;
-import models.Comments;
 import models.Post;
 import models.SocialNetwork;
 import models.User;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -101,7 +98,7 @@ public class Main {
                     case "comment" -> {
                         System.out.println("Enter the post id to comment");
                         Long postId = sc.nextLong();
-                        System.out.println("Enter the content");
+                        System.out.println("Enter the content ");
 //                    String test = sc.nextLine();
                         String context = sc.next();
 //                    System.out.println("CONTENT -> "+test);
