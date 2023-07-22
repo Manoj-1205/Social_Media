@@ -24,7 +24,7 @@ public class Main {
         while (true) {
 
             if(sessionRepository.getCurrentUser()!=null){
-                System.out.println("\nCURRENT USER : "+ sessionRepository.getCurrentUser().getUserName());
+                System.out.println("\nCURRENT USER : "+sessionRepository.getCurrentUser().getUserName());
             }
             System.out.println("\n");
             System.out.println("""
