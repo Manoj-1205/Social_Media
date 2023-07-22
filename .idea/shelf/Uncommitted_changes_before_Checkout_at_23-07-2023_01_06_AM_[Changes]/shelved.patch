@@ -1,0 +1,72 @@
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+--- a/src/Main.java	
++++ b/src/Main.java	
+@@ -24,7 +24,7 @@
+         while (true) {
+ 
+ 
+-            System.out.println("Enter the commands you want to execute");
++
+             System.out.println("""
+                     1.signup\s
+                     2.login\s
+@@ -34,6 +34,7 @@
+                     6.showUsers\s
+                     7.votePost
+                     8.comment""");
++            System.out.println("Enter the commands you want to execute");
+             Scanner sc = new Scanner(System.in);
+             String request = sc.nextLine();
+             switch (request) {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -1,7 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="b7547ec0-cf67-4989-b977-62ba9e73e776" name="Changes" comment="Final Commit 2" />
++    <list default="true" id="b7547ec0-cf67-4989-b977-62ba9e73e776" name="Changes" comment="Final Commit">
++      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -166,7 +168,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1690054082125</updated>
+     </task>
+-    <option name="localTasksCounter" value="14" />
++    <task id="LOCAL-00014" summary="Final Commit">
++      <created>1690054157319</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1690054157319</updated>
++    </task>
++    <option name="localTasksCounter" value="15" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -188,8 +197,8 @@
+     <MESSAGE value="Comment section 2" />
+     <MESSAGE value="Voting Tracker" />
+     <MESSAGE value="Except comment" />
+-    <MESSAGE value="Final Commit" />
+     <MESSAGE value="Final Commit 2" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Final Commit 2" />
++    <MESSAGE value="Final Commit" />
++    <option name="LAST_COMMIT_MESSAGE" value="Final Commit" />
+   </component>
+ </project>
+\ No newline at end of file
