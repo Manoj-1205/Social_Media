@@ -23,13 +23,15 @@ public class Main {
         //Console input
         while (true) {
 
-
-            System.out.println("Enter the commands you want to execute");
+            if(sessionRepository.getCurrentUser()!=null){
+                System.out.println("\nCURRENT USER : "+sessionRepository.getCurrentUser().getUserName());
+            }
+            System.out.println("\nEnter the commands you want to execute");
             System.out.println("""
                     1.signup\s
                     2.login\s
                     3.post\s
-                    4.showNewsFeed\s
+                    4.newsfeed\s
                     5.follow\s
                     6.showUsers\s
                     7.votePost
@@ -47,6 +49,9 @@ public class Main {
                 case "login" -> {
                     System.out.println("Enter username: ");
                     String name = sc.nextLine();
+                    if(sessionRepository.getCurrentUser()!=null){
+                        socialNetwork.logout(sessionRepository.getCurrentUser());
+                    }
                     if (!userRepository.getUserMap().containsKey(name)) {
                         System.out.println("Account not found. Please sign up first");
                         break;
@@ -62,7 +67,7 @@ public class Main {
                             .build();
                     socialNetwork.postFeed(post);
                 }
-                case "showNewsFeed" -> {
+                case "newsfeed" -> {
                     socialNetwork.showNewsFeed(sessionRepository.getCurrentUser());
                 }
                 case "follow" -> {
@@ -91,9 +96,22 @@ public class Main {
                     System.out.println("Enter the post id to comment");
                     Long postId = sc.nextLong();
                     System.out.println("Enter the content");
-                    String content = sc.nextLine();
-                    socialNetwork.comment(sessionRepository.getCurrentUser(), postId, content);
+//                    String test = sc.nextLine();
+                    String context = sc.next();
+//                    System.out.println("CONTENT -> "+test);
+                    socialNetwork.comment(sessionRepository.getCurrentUser(), postId, context);
 
+                }
+                case "reply" ->{
+                    System.out.println("Enter the comment Id to reply");
+                    Long commentId = sc.nextLong();
+                    System.out.println("Enter the content");
+                    String content = sc.nextLine();
+                    socialNetwork.reply(sessionRepository.getCurrentUser(), commentId, content);
+                }
+
+                default -> {
+                    System.out.println("Invalid option. Please type complete command (Example : signup)");
                 }
 
             }

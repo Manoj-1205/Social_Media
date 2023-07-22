@@ -23,17 +23,16 @@ public class FeedRepository {
     }
 
     public void addComment(User user, Long postId, Comments comment){
-//        if(postMap.get(postId).getCommentList()==null){
-//            postMap.
-//        }
         postMap.get(postId).getCommentList().add(comment);
         commentsMap.put(comment.getCommentId(), comment);
     }
 
     public void replyToComment(User user, Long commentId, Comments comment){
-//        if(postMap.get(postId).getCommentList()==null){
-//            postMap.
-//        }
         commentsMap.get(commentId).getReplyList().add(comment);
+    }
+
+    public void upvoteComment(long commentId, User user){
+        Comments comment = commentsMap.get(commentId);
+//        comment.getUpvote()
     }
 }

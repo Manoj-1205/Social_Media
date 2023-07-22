@@ -30,6 +30,7 @@ public class SocialNetwork {
     }
 
     public void login(User user){
+
         if(!userRepository.getUserList().contains(user)){
             System.out.println("Account not found!. Please sign up first.");
             return;
@@ -38,6 +39,7 @@ public class SocialNetwork {
         if(sessionRepository.getSessionStatus(user)){
             System.out.println("Exiting Previous session..");
         }
+
         System.out.println(user.getUserName()+" Logged in successfully");
         sessionRepository.setSessionStatusActive(user);
     }
@@ -63,9 +65,13 @@ public class SocialNetwork {
 
     public void showNewsFeed(User user){
         if(!isUserLoggedIn(user)) return;
+
         System.out.println("\n\nNEWS FEED..");
         Map<Long,Post> postList = feedRepository.getPostList();
         List<Post> posts = new ArrayList<>(postList.values());
+        if(posts.size()==0){
+            System.out.println("No posts were created.");
+        }
         posts.sort(new NewsFeedComparator(user));
         posts.forEach((post) -> {
             System.out.println(post.getPostId() + " " + post.getContent() + "\nUpvotes " + post.getUpvotes() +
@@ -130,6 +136,13 @@ public class SocialNetwork {
                 .build();
         feedRepository.replyToComment(user, commentId, comment);
 
+    }
+
+    public void upvoteComment(Integer CommentId, User user){
+        if(!isUserLoggedIn(user)) return;
+    }
+    public void downvoteComment(Integer CommentId, User user){
+        if(!isUserLoggedIn(user)) return;
     }
 
     public Boolean isUserLoggedIn(User user){
