@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SessionRepository {
-    private static Boolean sessionStatus = false;
+    private static final Boolean sessionStatus = false;
     private Map<User, Boolean> userSessionStatus = new HashMap<>();
     private User currentUser;
     public void setSessionStatusActive(User user){

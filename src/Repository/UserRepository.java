@@ -10,8 +10,8 @@ import java.util.Map;
 
 @Getter
 public class UserRepository {
-    private static List<User> userList=new ArrayList<>();
-    private static Map<String, User> userMap=new HashMap<>();
+    private static final List<User> userList=new ArrayList<>();
+    private static final Map<String, User> userMap=new HashMap<>();
 
 
     public  void save(User user){
