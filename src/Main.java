@@ -23,8 +23,10 @@ public class Main {
         //Console input
         while (true) {
 
-
-            System.out.println("Enter the commands you want to execute");
+            if(sessionRepository.getCurrentUser()!=null){
+                System.out.println("\nCURRENT USER : "+sessionRepository.getCurrentUser().getUserName());
+            }
+            System.out.println("\nEnter the commands you want to execute");
             System.out.println("""
                     1.signup\s
                     2.login\s
@@ -47,6 +49,9 @@ public class Main {
                 case "login" -> {
                     System.out.println("Enter username: ");
                     String name = sc.nextLine();
+                    if(sessionRepository.getCurrentUser()!=null){
+                        socialNetwork.logout(sessionRepository.getCurrentUser());
+                    }
                     if (!userRepository.getUserMap().containsKey(name)) {
                         System.out.println("Account not found. Please sign up first");
                         break;
