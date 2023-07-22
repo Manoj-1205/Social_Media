@@ -12,8 +12,8 @@ import java.util.Map;
 
 public class VotingTracker {
 
-    private static  Map<User, List<Long>> userUpvotes = new HashMap<>();
-    private static Map<User, List<Long>> userDownvotes = new HashMap<>();
+    private static final Map<User, List<Long>> userUpvotes = new HashMap<>();
+    private static final Map<User, List<Long>> userDownvotes = new HashMap<>();
 
 //    private static FeedRepository feedRepository;
 

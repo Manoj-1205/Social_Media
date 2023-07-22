@@ -13,10 +13,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    private static UserRepository userRepository=new UserRepository();
-    private static SessionRepository sessionRepository=new SessionRepository();
-    private static FeedRepository feedRepository=new FeedRepository();
-    private static VotingTracker votingTracker=new VotingTracker();
+    private static final UserRepository userRepository=new UserRepository();
+    private static final SessionRepository sessionRepository=new SessionRepository();
+    private static final FeedRepository feedRepository=new FeedRepository();
+    private static final VotingTracker votingTracker=new VotingTracker();
     public static void main(String[] args){
 
         SocialNetwork socialNetwork=new SocialNetwork(userRepository, sessionRepository, feedRepository, votingTracker);
