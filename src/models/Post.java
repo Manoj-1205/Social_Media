@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
@@ -19,7 +20,8 @@ public class Post {
     private User user;
     private String content;
 
-    private List<Comments> commentList;
+    @Builder.Default
+    private List<Comments> commentList=new ArrayList<>();
 
     @Builder.Default
     private LocalDateTime createdTime = LocalDateTime.now();

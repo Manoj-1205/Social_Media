@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7547ec0-cf67-4989-b977-62ba9e73e776" name="Changes" comment="Login Functionality">
+    <list default="true" id="b7547ec0-cf67-4989-b977-62ba9e73e776" name="Changes" comment="Followers, Following">
+      <change afterPath="$PROJECT_DIR$/src/generators/CommentIdGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/generators/UserIdGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/NewsFeedComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/FeedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/FeedRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/SessionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/SessionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/VotingTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VotingTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Post.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/SocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/SocialNetwork.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.java" afterDir="false" />
     </list>
@@ -116,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689918486976</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Followers, Following">
+      <created>1689930801003</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689930801003</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +146,7 @@
     <MESSAGE value="Basic models" />
     <MESSAGE value="VotingTracker" />
     <MESSAGE value="Login Functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login Functionality" />
+    <MESSAGE value="Followers, Following" />
+    <option name="LAST_COMMIT_MESSAGE" value="Followers, Following" />
   </component>
 </project>
