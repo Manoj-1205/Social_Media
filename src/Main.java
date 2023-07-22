@@ -25,8 +25,14 @@ public class Main {
 
 
             System.out.println("Enter the commands you want to execute");
-            System.out.println("1.signup \n2.login \n3.post \n4.showNewsFeed \n5.follow " +
-                                "\n6.showUsers \n7.votePost");
+            System.out.println("""
+                    1.signup\s
+                    2.login\s
+                    3.post\s
+                    4.showNewsFeed\s
+                    5.follow\s
+                    6.showUsers\s
+                    7.votePost""");
             Scanner sc = new Scanner(System.in);
             String request = sc.nextLine();
             switch (request) {
