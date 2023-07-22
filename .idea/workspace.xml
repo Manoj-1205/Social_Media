@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7547ec0-cf67-4989-b977-62ba9e73e776" name="Changes" comment="Except comment">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/FeedRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/FeedRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PostRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/VotingTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/VotingTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Comments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/SocialNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/SocialNetwork.java" afterDir="false" />
-    </list>
+    <list default="true" id="b7547ec0-cf67-4989-b977-62ba9e73e776" name="Changes" comment="Final Commit 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,7 +138,35 @@
       <option name="project" value="LOCAL" />
       <updated>1690052290146</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Final Commit">
+      <created>1690053808437</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1690053808437</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Final Commit">
+      <created>1690053977024</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690053977024</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Final Commit">
+      <created>1690054037205</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1690054037205</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Final Commit 2">
+      <created>1690054082125</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1690054082125</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +188,8 @@
     <MESSAGE value="Comment section 2" />
     <MESSAGE value="Voting Tracker" />
     <MESSAGE value="Except comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Except comment" />
+    <MESSAGE value="Final Commit" />
+    <MESSAGE value="Final Commit 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Commit 2" />
   </component>
 </project>
