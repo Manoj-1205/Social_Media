@@ -43,7 +43,7 @@ public class Main {
 
                 switch (request) {
                     case "signup" -> {
-                        System.out.println("Enter username: ");
+                        System.out.println("Enter username:  ");
                         String username = sc.nextLine();
                         User user = User.builder().userName(username).build();
                         user.setUserId(UserIdGenerator.nextId());
