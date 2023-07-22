@@ -32,7 +32,8 @@ public class Main {
                     4.showNewsFeed\s
                     5.follow\s
                     6.showUsers\s
-                    7.votePost""");
+                    7.votePost
+                    8.comment""");
             Scanner sc = new Scanner(System.in);
             String request = sc.nextLine();
             switch (request) {
