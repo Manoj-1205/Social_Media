@@ -34,6 +34,9 @@ public class VotingTracker {
         upvotePost.setUpvotes(upvotePost.getUpvotes()+1);
 
     }
+
+
+
     public void downvote(Long postId, User user, FeedRepository feedRepository){
         if(!userDownvotes.containsKey(user)){
             userDownvotes.put(user, new ArrayList<>());

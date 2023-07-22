@@ -83,11 +83,11 @@ public class SocialNetwork {
                 post.getCommentList().forEach(comments -> {
                             System.out.println(comments.getCommentId() + " " +
                                     comments.getAuthor().getUserName() + ": " + comments.getContent()
-                                    + " " + comments.commentCreatedTime(LocalDateTime.now(), comments.getTimeStamp())
+                                    + ", Updated " + comments.commentCreatedTime(LocalDateTime.now(), comments.getTimeStamp())
                                     +"\nUpvotes: "+comments.getUpvote()+" \nDownvotes: "+comments.getDownvote());
                             comments.getReplyList().forEach(reply -> System.out.println("\t"+reply.getCommentId() + " " +
                                     reply.getAuthor().getUserName() + ": " + reply.getContent()
-                                    + " " + reply.commentCreatedTime(LocalDateTime.now(), reply.getTimeStamp())
+                                    + ", Updated " + reply.commentCreatedTime(LocalDateTime.now(), reply.getTimeStamp())
                                     +"\n\tUpvotes: "+comments.getUpvote()+" \n\tDownvotes: "+comments.getDownvote()));
                         }
                 );
@@ -109,6 +109,23 @@ public class SocialNetwork {
         if(!isUserLoggedIn(user)) return;
         votingTracker.downvote(postId, user, feedRepository);
         System.out.println("DownVoted Post "+postId);
+    }
+
+    public void upvoteComment(Long commentId, User user){
+        if(!isUserLoggedIn(user)) return;
+        if(!feedRepository.getCommentsMap().containsKey(commentId)){
+            System.out.println("Invalid Comment Id"); return;
+        }
+        Comments comment = feedRepository.getCommentsMap().get(commentId);
+        comment.setUpvote(comment.getUpvote()+1);
+    }
+    public void downvoteComment(Long commentId, User user){
+        if(!isUserLoggedIn(user)) return;
+        if(!feedRepository.getCommentsMap().containsKey(commentId)){
+            System.out.println("Invalid Comment Id"); return;
+        }
+        Comments comment = feedRepository.getCommentsMap().get(commentId);
+        comment.setDownvote(comment.getDownvote()+1);
     }
 
     public void follow(User user, User target){

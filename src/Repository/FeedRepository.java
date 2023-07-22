@@ -1,5 +1,6 @@
 package Repository;
 
+import lombok.Getter;
 import models.Comments;
 import models.Post;
 import models.User;
@@ -9,10 +10,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Getter
 public class FeedRepository {
 
     private static Map<Long, Post> postMap = new HashMap<>();
-    private static Map<Long, Comments> commentsMap=new HashMap<>();
+    private  Map<Long, Comments> commentsMap=new HashMap<>();
 
     public void save(Post post){
         postMap.put(post.getPostId(), post);
