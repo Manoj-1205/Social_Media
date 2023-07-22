@@ -18,73 +18,8 @@ public class Main {
     private static FeedRepository feedRepository=new FeedRepository();
     private static VotingTracker votingTracker=new VotingTracker();
     public static void main(String[] args){
-        User user1=new User(1L, "Manoj", new ArrayList<>(), new ArrayList<>());
-        User user2=new User(2L, "Sam", new ArrayList<>(), new ArrayList<>());
-        User user3=new User(3L, "Praveen", new ArrayList<>(), new ArrayList<>());
-        User user4=new User(4L, "Anto", new ArrayList<>(), new ArrayList<>());
-//        Post post=new Post(user1, "Getting 1% Better every day", 0,0,new ArrayList<>());
-
-        Post post1 = Post.builder()
-                .user(user1)
-                .content("Getting 1% Better every day")
-                .build();
-
-        System.out.println("Post created time "+post1.getCreatedTime());
-
-        Post post2 = Post.builder()
-                .user(user1)
-                .content("Chase your dreams")
-                .build();
-        Post post3 = Post.builder()
-                .user(user2)
-                .content("All I want is cake")
-                .build();
-
-        Post post4 = Post.builder()
-                .user(user3)
-                .content("Friends Electrical")
-                .build();
-
-
 
         SocialNetwork socialNetwork=new SocialNetwork(userRepository, sessionRepository, feedRepository, votingTracker);
-
-        socialNetwork.postFeed(post1);
-        socialNetwork.postFeed(post2);
-        socialNetwork.postFeed(post3);
-        socialNetwork.postFeed(post4);
-//        try {
-//            // Wait for 5 seconds
-//            Thread.sleep(5000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
-
-        socialNetwork.upvotePost(1L, user1);
-        socialNetwork.upvotePost(2L, user1);
-        socialNetwork.downvotePost(2L, user2);
-        socialNetwork.downvotePost(2L, user1);
-
-
-        //user 1 follows user2
-        socialNetwork.follow(user1, user2);
-//        socialNetwork.follow(user1, user3);
-
-        //AddComment
-        socialNetwork.comment(user1, 1L, "Well Said!");
-        socialNetwork.comment(user2, 1L, "We can do it");
-        socialNetwork.comment(user2, 3L, "Share the cake");
-
-        socialNetwork.upvotePost(4L, user2);
-        socialNetwork.upvotePost(4L, user1);
-        socialNetwork.upvotePost(4L, user2);
-        socialNetwork.upvotePost(4L, user3);
-        //Reply comment
-
-        socialNetwork.reply(user1, 2L, "Great man");
-
-        socialNetwork.showNewsFeed(user1);
-
         //Console input
         while (true) {
 
@@ -166,4 +101,73 @@ public class Main {
 //        socialNetwork.logout(user1);
 //        socialNetwork.login(user1);
 //        socialNetwork.login(user1);
-//        socialNetwork.login(user2);
+//
+
+
+
+//    User user1=new User(1L, "Manoj", new ArrayList<>(), new ArrayList<>());
+//    User user2=new User(2L, "Sam", new ArrayList<>(), new ArrayList<>());
+//    User user3=new User(3L, "Praveen", new ArrayList<>(), new ArrayList<>());
+//    User user4=new User(4L, "Anto", new ArrayList<>(), new ArrayList<>());
+////        Post post=new Post(user1, "Getting 1% Better every day", 0,0,new ArrayList<>());
+//
+//    Post post1 = Post.builder()
+//            .user(user1)
+//            .content("Getting 1% Better every day")
+//            .build();
+//
+//        System.out.println("Post created time "+post1.getCreatedTime());
+//
+//                Post post2 = Post.builder()
+//                .user(user1)
+//                .content("Chase your dreams")
+//                .build();
+//                Post post3 = Post.builder()
+//                .user(user2)
+//                .content("All I want is cake")
+//                .build();
+//
+//                Post post4 = Post.builder()
+//                .user(user3)
+//                .content("Friends Electrical")
+//                .build();
+//
+//
+//
+//
+//
+//                socialNetwork.postFeed(post1);
+//                socialNetwork.postFeed(post2);
+//                socialNetwork.postFeed(post3);
+//                socialNetwork.postFeed(post4);
+////        try {
+////            // Wait for 5 seconds
+////            Thread.sleep(5000);
+////        } catch (InterruptedException e) {
+////            e.printStackTrace();
+////        }
+//
+//                socialNetwork.upvotePost(1L, user1);
+//                socialNetwork.upvotePost(2L, user1);
+//                socialNetwork.downvotePost(2L, user2);
+//                socialNetwork.downvotePost(2L, user1);
+//
+//
+//                //user 1 follows user2
+//                socialNetwork.follow(user1, user2);
+////        socialNetwork.follow(user1, user3);
+//
+//                //AddComment
+//                socialNetwork.comment(user1, 1L, "Well Said!");
+//                socialNetwork.comment(user2, 1L, "We can do it");
+//                socialNetwork.comment(user2, 3L, "Share the cake");
+//
+//                socialNetwork.upvotePost(4L, user2);
+//                socialNetwork.upvotePost(4L, user1);
+//                socialNetwork.upvotePost(4L, user2);
+//                socialNetwork.upvotePost(4L, user3);
+//                //Reply comment
+//
+//                socialNetwork.reply(user1, 2L, "Great man");
+//
+//                socialNetwork.showNewsFeed(user1);

@@ -1,0 +1,11 @@
+Index: src/Repository/PostRepository.java
+===================================================================
+diff --git a/src/Repository/PostRepository.java b/src/Repository/PostRepository.java
+deleted file mode 100644
+--- a/src/Repository/PostRepository.java	
++++ /dev/null	
+@@ -1,4 +0,0 @@
+-package Repository;
+-
+-public class PostRepository {
+-}
